@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Internet - Hacker Experience</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" type="text/javascript" src="https://www.gstatic.com/pub-config/ca-pub-7193007468156667.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgQEVlBTGwAGUldaAAI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAPFBMVEX///8AzAABwgIBwQMDtgUEqwcGnwoHlA0HlQwJig8KfhILcxQNaBYOXRkQUhsRRx4TOyEUMCMWJSUXGihTR39WAAAFBElEQVR42u3c63bqIBAF4KKiNsQE9f3f9az+s0fNXMC1ZtPNA0D9zE5gJvYr/fHxRQACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgABjAdy3hnP2471pXNwfqwgzHzEAHv5O28jCvDPIFXC/7n3rrsK0OxSAx6/KMCbDhRUcwBWC/c2gGh3AE4JFH4D4AI4QnEwXVXgAcwj2V5NofABrCObt6W47NABjCKQtwDnBAdhCULfnWhIggCUExRYADABDCA43WwBAAPQhWI0BQAGofbYAzwFAAbiXLnvgc4IFuGfNchdzAHAAavtqrwKAA6AJgbAH/k7QAHIIhC3AmsABpBAIe+DbAR1ACoGwBZgSPMB2CCZXALAAqn8L8C4AWABbIVh8AQADeB+CkzMAaADVVwZ7HwA0gHeX8uwNABzA6+8yuwMAB/D6wwhlsMNIAK8u59KygYIDeA6BUAaraSyA5xCsTYcoPID/Q3BqO0YDAvwOwb4pAJAAv0NwaawiIAI8huDYWkeKCFAMIbi2VhIjAkgbm4cQlOZackiArA1Bbu8mhARIcgj2ii3AdQcLIIdgUZTBVB3FoAByCE7iFkDXUw4KoArB0h6AuACKEJw6BCAwgByCHgEIDCCHoEcAIgPIIegQgNAAueHz698qCgzQEAJ1AGID+ENwTmMAeEOwpO4Aq2+8/Qqn48ZQ13vfPR93/QF6D+1Nun44AOEB8ocDEB7AEQJTAOIDSFX/xgAAAEivP7cFAABA/A1cUwAQAGwhOKfxACwhWNOAAIYQ3A5DAuhDMKUxAbQhsAcABEAZAkcAUAB0ZwLXT80xAHRHgtt+WADloXAZFUB9IjqNCaA/EztCgABgqIosIwKUTz5eAABsRSHzv9yID2AsC86jAZTPPmDCA9irosYQRAdw1MXnkQDKpx8xwQF8vTFTCGIDOLujZRQAd388dwfo3R2uWy3V1uaw/l9uBG+PN7wjU0YAaHpLKuMD5KabTMUH2A5AqZ1CEBagCF/wsVMIogJk8dNd+jQJogJU8freSd2SCRmgKO5wUrdE1yeJCZBV8a49QhAToKpu8OKDckIF0ATgZ8wdQhARIGufb+J9cMUE0AXgZ3y3hwDup7PV9OqE3CqCA/i9wTs0t4rQAIq1ZnIaC+DpkLe7NoYADOD5hHNuDAEWwKsz7tIWAiiA6nqFbDsEUADZVzteRgF4V+S5toQACKC6V9lqFQEBvK9xiffBeQSAjSqneCja6ETBAGzWuSd/CGAAclsXdUYHKK0LHbEBxEbP7A0BCIDY5ZDvgzMygKLP9e1EhABQdTpX3ywQAKo2X/ZdRwgAykZvcUECAGhb/WJx6OVMAADqlz3OnmspPoDhnbfVgRkewPDCl1wkfzFbeIBsWU++D05oAMW2oHgffOqXBgeo3RdcsQCydcXFGoLYAMW8ovw76/9CEBqgOpacjCEIDZA9a1ZbCCIDlA+t+SsEgQGqc9GLOPOCAZCdi8rFocdWUVyAkrxDLg499EvDAtTkH6shBF/pjw8CEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEGGL8AyvZIDHGE8prAAAAAElFTkSuQmCC" type="image/x-icon">
+<link rel="stylesheet" href="/css/A.bootstrap.min.css+bootstrap-responsive.min.css+he.css,Mcc.PQGP5bQUtB.css.pagespeed.cf.pcp-m06owy.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery.gritter.css"><link rel="stylesheet" type="text/css" href="css/jquery.gritter.css"></head>
+<body class="internet history">
+<div id="header">
+<h1><a href="#">Hacker Experience</a></h1>
+</div>
+<div id="user-nav" class="navbar navbar-inverse">
+<ul class="nav btn-group" style="width: auto; margin: 0px;">
+<li class="btn btn-inverse"><a href="/profile"><i class="fa fa-inverse fa-user"></i> <span class="text">rjordache</span></a></li>
+<li class="btn btn-inverse"><a href="/mail"><i class="fa fa-inverse fa-envelope"></i> <span class="text">E-Mail</span> <span class="mail-unread label label-important">1364</span></a></li>
+<li class="btn btn-inverse"><a href="/settings"><i class="fa fa-inverse fa-wrench"></i> <span class="text">Configurações</span></a></li>
+<li class="btn btn-inverse"><a href="/logout"><i class="fa fa-power-off fa-inverse"></i> <span class="text">Sair</span></a></li>
+</ul>
+</div>
+<span id="notify" class="shown"></span>
+<div id="sidebar" style="position: relative;">
+<a href="#" class="visible-phone"><i class="fa fa-inverse fa-chevron-down"></i> Internet</a>
+<ul style="display: block;">
+<li><a href="/index"><i class="fa fa-inverse fa-home"></i> <span>Início</span></a></li>
+<li><a href="/processes"><i class="fa fa-inverse fa-tasks"></i> <span>Gerenciador de Tarefas</span></a></li>
+<li id="menu-software"><a href="/software"><i class="fa fa-inverse fa-folder-open"></i> <span>Software</span></a></li>
+<li id="menu-internet" class="active"><a href="/internet"><i class="fa fa-inverse fa-globe"></i> <span>Internet</span></a></li>
+<li><a href="/log"><i class="fa fa-inverse fa-book"></i> <span>Log de Dados</span></a></li>
+<li><a href="/hardware"><i class="fa fa-inverse fa-desktop"></i> <span>Hardware</span></a></li>
+<li><a href="/university"><i class="fa fa-inverse fa-flask"></i> <span>Universidade</span></a></li>
+<li><a href="/finances"><i class="fa fa-inverse fa-briefcase"></i> <span>Finanças</span></a></li>
+<li><a href="/list"><i class="fa fa-inverse fa-terminal"></i> <span>Banco de Dados</span></a></li>
+<li id="menu-mission"><a href="/missions"><i class="fa fa-inverse fa-building-o"></i> <span>Missões</span></a></li>
+<li><a href="/clan"><i class="fa fa-inverse fa-users"></i> <span>Clan</span><span class="label">War</span></a></li>
+<li><a href="/ranking"><i class="fa fa-inverse fa-bars"></i> <span>Ranking</span></a></li>
+<li><a href="/fame"><i class="fa fa-inverse fa-star"></i> <span>Mural da Fama</span></a></li>
+</ul>
+</div>
+<div id="content" style="min-height: 534px;">
+<div id="content-header">
+<h1>Internet</h1>
+<div class="header-ip hide-phone" style="margin-top: 10px;">
+<div style="text-align: right;">
+<span class="header-ip-show">000.000.000.000</span>
+</div>
+<div class="header-info">
+<div class="pull-right">
+<span class="icon-tab he16-time" title="Tempo do Servidor"></span> <span class="small nomargin" style="margin-right: 7px;">2014-11-20 04:19</span>
+<span class="online"><span class="he16-online" title="377 jogadores online"></span> <span class="small nomargin">377</span></span>
+<div class="reputation-info"><div style="float: left;"><span class="small nomargin item" title="Reputação">583,122</span><span class="small" title="Ranking">(#118)</span></div></div><div class="finance-info"><div style="float: right;"><span class="small nomargin green header-finances" title="Finanças">$1,896</span></div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="breadcrumb">
+<a href="index" title="Go to Home" class="tip-bottom"><i class="fa fa-home"></i> Início</a>
+<a href="internet" id="link0" class="current"> Internet</a>
+</div>
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span9">
+<div class="widget-box">
+<div class="widget-content padding">
+<div class="span12">
+<form action="" method="get" class="form-horizontal">
+<div class="browser-input">
+Endereço IP: <input class="browser-bar" name="ip" type="text" value="1.2.3.4">
+<input type="submit" class="btn btn-inverse" value="Ir">
+<div style="float: right; padding-top: 5px;" class="hide-phone">
+<a href="internet?ip=1.2.3.4"><span class="he16-home" title="Início" style="margin-top: 4px;"></span></a>
+<a href="internet"><span class="he16-refresh" title="Atualizar" style="margin-top: 4px;"></span></a>
+</div>
+</div>
+</form>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div class="widget-box">
+<div class="widget-title">
+<ul class="nav nav-tabs">
+<li class="link active"><a href="internet"><span class="he16-index icon-tab"></span>Index</a></li>
+<li class="link"><a href="?action=login"><span class="he16-login icon-tab"></span>Entrar</a></li>
+<li class="link"><a href="?action=hack"><span class="icon-tab he16-internet_hack"></span>Invadir</a></li>
+</ul>
+</div>
+<div class="widget-content padding noborder">
+<div class="span12">
+<p>Servidor 1.2.3.4 está <font color="green"><b>online</b></font><span class="label label-warning pull-right">Whois</span></p>
+<script type="text/javascript">var telldc="22.71.181.27";var dctitle="Faça download de mais softwares.";var dcdesc="Precisando de mais softwares? Você pode querer dar uma olhada no <a class=\"notify-link\" href=\"internet?ip=22.71.181.27\">Centro de Downloads</a>.";</script> <p>Bem-vindo ao primeiro whois!</p><ul class="whois"><li><a href="internet?ip=22.71.181.27"><span class="item">22.71.181.27</span> - <span class="whois-member">Centro de Downloads</span></a></li><li><a href="internet?ip=152.182.55.191"><span class="item">152.182.55.191</span> - <span class="whois-member">Mercado de Torrents</span></a></li><li><a href="internet?ip=195.53.150.215"><span class="item">195.53.150.215</span> - <span class="whois-member">Primeiro Enigma</span></a></li><li><a href="internet?ip=191.127.75.6"><span class="item">191.127.75.6</span> - <span class="whois-member">Primeiro Banco Internacional</span></a></li><li><a href="internet?ip=118.29.117.199"><span class="item">118.29.117.199</span> - <span class="whois-member">elgooG</span></a></li><li><a href="internet?ip=254.56.108.41"><span class="item">254.56.108.41</span> - <span class="whois-member">Murder King</span></a></li><li><a href="internet?ip=215.53.175.110"><span class="item">215.53.175.110</span> - <span class="whois-member">Pineapple</span></a></li></ul>Trending Sites:<ul class="whois"><li><a href="internet?ip=221.44.166.15"><span class="item">221.44.166.15</span> - <span class="whois-member">ISP - Provedor de Serviços</span></a></li><li><a href="internet?ip=179.221.16.191"><span class="item">179.221.16.191</span> - <span class="whois-member">NSA</span></a></li><li><a href="internet?ip=190.207.82.37"><span class="item">190.207.82.37</span> - <span class="whois-member">Hacker News</span></a></li><li><a href="internet?ip=129.248.70.252"><span class="item">129.248.70.252</span> - <span class="whois-member">Mercado de Bitcoins</span></a></li></ul><p></p>
+</div>
+</div>
+<div style="clear: both;" class="nav nav-tabs">&nbsp;</div>
+</div>
+<div class="center" style="margin-bottom: 20px;">
+<style type="text/css">
+    @media (min-width:320px) and (max-width:480px){.adslot_internet_un{width:250px;height:250px}}@media (min-width:768px) and (max-width:1024px){.adslot_internet_un{width:336px;height:280px}}@media (min-width:1024px){.adslot_internet_un{width:728px;height:90px}}@media (min-width:1280px){.adslot_internet_un{width:728px;height:90px}}@media (min-width:1366px){.adslot_internet_un{width:728px;height:90px}}@media (min-width:1824px){.adslot_internet_un{width:970px;height:90px}}</style>
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ 
+<ins class="adsbygoogle adslot_internet_un" style="display: inline-block; width: 728px; height: 90px;" data-ad-client="ca-pub-7193007468156667" data-ad-slot="5776909757" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+</div>
+<div class="span3">
+<div class="widget-box collapsible">
+<div class="widget-title">
+<a href="#history" data-toggle="collapse">
+<span class="icon"><span class="he16-page_copy"></span></span>
+<h5>Visitados recentemente</h5>
+</a>
+</div>
+<div class="collapse in" id="history">
+<div class="widget-content">
+<div id="visited-ips"><a href="internet?ip=1.2.3.4">1.2.3.4</a><span id="visit2"><span class="small">2 h<span class="hide1024">ours</span></span></span><br><a href="internet?ip=129.248.70.252">129.248.70.252</a><span id="visit1"><span class="small">8 h<span class="hide1024">ours</span></span></span><br></div>
+</div>
+</div>
+</div>
+<div class="widget-box collapsible">
+<div class="widget-title">
+<a href="#important" data-toggle="collapse">
+<span class="icon"><span class="he16-important"></span></span>
+<h5>IPs importantes</h5>
+<span class="label label-important hide1024">13</span>
+</a>
+</div>
+<div class="collapse in" id="important">
+<div class="widget-content">
+<a href="internet?ip=1.2.3.4">1.2.3.4<span class="hide1024 small"> Primeiro Whois</span></a><br>
+<a href="internet?ip=127.157.34.237">127.157.34.237<span class="hide1024 small"> Safenet</span></a><br>
+<a href="internet?ip=191.127.75.6">191.127.75.6<span class="hide1024 small"> Primeiro Banco Internacional</span></a><br>
+<a href="internet?ip=158.81.18.124">158.81.18.124<span class="hide1024 small"> Banco Ultimate</span></a><br>
+<a href="internet?ip=70.152.104.113">70.152.104.113<span class="hide1024 small"> HEBC</span></a><br>
+<a href="internet?ip=221.44.166.15">221.44.166.15<span class="hide1024 small"> ISP - Provedor de Serviços</span></a><br>
+<a href="internet?ip=179.221.16.191">179.221.16.191<span class="hide1024 small"> NSA</span></a><br>
+<a href="internet?ip=77.138.58.253">77.138.58.253<span class="hide1024 small"> Banco Suíço Internacional</span></a><br>
+<a href="internet?ip=2.152.176.124">2.152.176.124<span class="hide1024 small"> FBI</span></a><br>
+<a href="internet?ip=243.172.166.130">243.172.166.130<span class="hide1024 small"> Terceiro Whois</span></a><br>
+<a href="internet?ip=185.162.14.199">185.162.14.199<span class="hide1024 small"> Quarto Whois</span></a><br>
+<a href="internet?ip=127.230.138.202">127.230.138.202<span class="hide1024 small"> Segundo Whois</span></a><br>
+<a href="internet?ip=93.45.166.237">93.45.166.237<span class="hide1024 small"> American Expense</span></a><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="breadcrumb" class="center">
+<span class="pull-left hide-phone" style="margin-left: 10px;"><a href="legal"><font color="">Termos de Uso</font></a></span>
+<span class="pull-left hide-phone"><a href="https://forum.hackerexperience.com/"><font color="">Fórum</font></a></span>
+<span class="pull-left hide-phone"><a href="stats">Estatísticas</a></span>
+<span class="center">2014 © <b>NeoArt Labs</b><a href="https://status.hackerexperience.com/">27 queries em 287 ms</a></span>
+<span id="credits" class="pull-right hide-phone link"><a>Créditos</a></span>
+<span id="report-bug" class="pull-right hide-phone link"><a>Relatar Bug</a></span>
+<span class="pull-right hide-phone"><a href="premium"><font color="">Premium</font></a></span>
+<span class="pull-right hide-phone"><a href="changelog">v1.0.13.2</a></span>
+</div>
+<!--[if IE]><script src="js/excanvas.min.js"></script><![endif]-->
+<script src="/js/jquery.min.js.pagespeed.jm.YSzgc-BSX9.js"></script>
+<script src="/js/bootstrap.min.js.pagespeed.jm.2a-wIawA8s.js"></script>
+<script src="/js/jquery.flot.min.js+jquery.validate.js.pagespeed.jc.bgS_BPTMZJ.js"></script><script>eval(mod_pagespeed_ZPSU$SRp7h);</script>
+ 
+ 
+<script>eval(mod_pagespeed_yAdYTkBhy1);</script>  
+<script src="js/main.js.pagespeed.jm.oC0Po-3w4s.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"2a4157be2d","applicationID":"3666873","transactionName":"MwABYkJUXUFSUxdYWwpKNkRZGlpcR1URX1EQSxNeQA==","queueTime":0,"applicationTime":335,"ttGuid":"","agentToken":"","atts":"H0cCFApOTk8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script>
+ 
+
+</div><div id="gritter-notice-wrapper"><div id="gritter-item-1" class="gritter-item-wrapper " style="display:none"><div class="gritter-top"></div><div class="gritter-item"><div class="gritter-close"></div><div class="gritter-without-image"><span class="gritter-title">Faça download de mais softwares.</span><p>Precisando de mais softwares? Você pode querer dar uma olhada no <a class="notify-link" href="internet?ip=22.71.181.27">Centro de Downloads</a>.</p></div><div style="clear:both"></div></div><div class="gritter-bottom"></div></div></div><script src="https://js-agent.newrelic.com/nr-476.min.js"></script><script type="text/javascript" src="https://beacon-2.newrelic.com/1/2a4157be2d?a=3666873&amp;pl=1416457173850&amp;v=476.c73f3a6&amp;to=MwABYkJUXUFSUxdYWwpKNkRZGlpcR1URX1EQSxNeQA%3D%3D&amp;ap=335&amp;be=795&amp;fe=2751&amp;dc=153&amp;f=%5B%22err%22,%22xhr%22,%22stn%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1416457173850,%22n%22:0,%22u%22:736,%22ue%22:741,%22dl%22:766,%22di%22:937,%22ds%22:937,%22de%22:998,%22dc%22:3534,%22l%22:3534,%22le%22:3537,%22f%22:0,%22dn%22:0,%22dne%22:0,%22c%22:0,%22ce%22:0,%22rq%22:2,%22rp%22:727,%22rpe%22:771%7D,%22navigation%22:%7B%7D%7D&amp;at=H0cCFApOTk8%3D&amp;jsonp=NREUM.setToken"></script></body></html>

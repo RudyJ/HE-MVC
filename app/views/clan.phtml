@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clan - Hacker Experience</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" type="text/javascript" src="https://www.gstatic.com/pub-config/ca-pub-7193007468156667.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgQEVlBTGwAGUldaAAI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+<link rel="shortcut icon" href="xfavicon.ico.pagespeed.ic.Jt97qL7xsM.png" type="image/x-icon">
+<link rel="stylesheet" href="css/A.bootstrap.min.css+bootstrap-responsive.min.css+he.css,Mcc.PQGP5bQUtB.css.pagespeed.cf.pcp-m06owy.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/tipTip.css"><link rel="stylesheet" type="text/css" href="css/jquery.gritter.css"></head>
+<body class="clan profile view">
+<div id="header">
+<h1><a href="#">Hacker Experience</a></h1>
+</div>
+<div id="user-nav" class="navbar navbar-inverse">
+<ul class="nav btn-group" style="width: auto; margin: 0px;">
+<li class="btn btn-inverse"><a href="profile"><i class="fa fa-inverse fa-user"></i> <span class="text">rjordache</span></a></li>
+<li class="btn btn-inverse"><a href="mail"><i class="fa fa-inverse fa-envelope"></i> <span class="text">E-Mail</span> <span class="mail-unread label label-important">1364</span></a></li>
+<li class="btn btn-inverse"><a href="settings"><i class="fa fa-inverse fa-wrench"></i> <span class="text">Configurações</span></a></li>
+<li class="btn btn-inverse"><a href="logout"><i class="fa fa-power-off fa-inverse"></i> <span class="text">Sair</span></a></li>
+</ul>
+</div>
+<span id="notify" class="shown"></span>
+<div id="sidebar" style="position: relative; top: 0px;">
+<a href="#" class="visible-phone"><i class="fa fa-inverse fa-chevron-down"></i> Clan</a>
+<ul style="display: block;">
+<li><a href="index"><i class="fa fa-inverse fa-home"></i> <span>Início</span></a></li>
+<li><a href="processes"><i class="fa fa-inverse fa-tasks"></i> <span>Gerenciador de Tarefas</span></a></li>
+<li id="menu-software"><a href="software"><i class="fa fa-inverse fa-folder-open"></i> <span>Software</span></a></li>
+<li id="menu-internet"><a href="internet"><i class="fa fa-inverse fa-globe"></i> <span>Internet</span></a></li>
+<li><a href="log"><i class="fa fa-inverse fa-book"></i> <span>Log de Dados</span></a></li>
+<li><a href="hardware"><i class="fa fa-inverse fa-desktop"></i> <span>Hardware</span></a></li>
+<li><a href="university"><i class="fa fa-inverse fa-flask"></i> <span>Universidade</span></a></li>
+<li><a href="finances"><i class="fa fa-inverse fa-briefcase"></i> <span>Finanças</span></a></li>
+<li><a href="list"><i class="fa fa-inverse fa-terminal"></i> <span>Banco de Dados</span></a></li>
+<li id="menu-mission"><a href="missions"><i class="fa fa-inverse fa-building-o"></i> <span>Missões</span></a></li>
+<li class="active"><a href="clan"><i class="fa fa-inverse fa-users"></i> <span>Clan</span><span class="label">War</span></a></li>
+<li><a href="ranking"><i class="fa fa-inverse fa-bars"></i> <span>Ranking</span></a></li>
+<li><a href="fame"><i class="fa fa-inverse fa-star"></i> <span>Mural da Fama</span></a></li>
+</ul>
+</div>
+<div id="content" style="min-height: 534px;">
+<div id="content-header">
+<h1>Clan</h1>
+<div class="header-ip hide-phone" style="margin-top: 10px;">
+<div style="text-align: right;">
+<span class="header-ip-show">000.000.000.000</span>
+</div>
+<div class="header-info">
+<div class="pull-right">
+<span class="icon-tab he16-time" title="Tempo do Servidor"></span> <span class="small nomargin" style="margin-right: 7px;">2014-11-20 05:08</span>
+<span class="online"><span class="he16-online" title="341 jogadores online"></span> <span class="small nomargin">341</span></span>
+<div class="reputation-info"><div style="float: left;"><span class="small nomargin item" title="Reputação">583,122</span><span class="small" title="Ranking">(#118)</span></div></div><div class="finance-info"><div style="float: right;"><span class="small nomargin green header-finances" title="Finanças">$1,896</span></div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="breadcrumb">
+<a href="index" title="Go to Home" class="tip-bottom"><i class="fa fa-home"></i> Início</a>
+<a href="clan" id="link0"> Clan</a>
+<a href="clan" id="link1" class="current">Hackers.com</a>
+</div>
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<div class="widget-box">
+<div class="widget-title">
+<ul class="nav nav-tabs">
+<li class="link active"><a href="clan"><span class="icon-tab he16-clan"></span><span class="hide-phone">Meu clan</span></a></li>
+<li class="link "><a href="?action=war"><span class="icon-tab he16-war_info"></span><span class="hide-phone">Guerra de Clans</span></a></li>
+<li class="link "><a href="?action=settings"><span class="icon-tab he16-clan_set"></span><span class="hide-phone">Configurações do clan</span></a></li>
+<li class="link "><a href="?action=search"><span class="icon-tab he16-search"></span><span class="hide-phone">Procurar clan</span></a></li>
+<li class="link "><a href="ranking?show=clan"><span class="icon-tab he16-ranking"></span><span class="hide-phone">Ranking de clans</span></a></li>
+<a href="https://wiki.hackerexperience.com/pt-br:clans"><span class="label label-info">Ajuda</span></a>
+</ul>
+</div>
+<div class="widget-content padding noborder">
+<div class="span8">
+<script>document.getElementById("link1").innerHTML="Hackers.com";</script>
+<div class="widget-box">
+<div class="widget-title">
+<span class="icon"><span class="he16-clan"></span></span>
+<h5>[lol] Hackers.com</h5>
+</div>
+<div class="widget-content nopadding">
+<table class="table table-cozy table-bordered table-striped">
+<tbody>
+<tr>
+<td><span class="item">Força</span></td>
+<td>12,613,293 <span class="small">(Rank #2)</span></td>
+</tr>
+<tr>
+<td><span class="item">Mestre</span></td>
+<td><a href="profile?id=51">silverfoxweb</a></td>
+</tr>
+<tr>
+<td><span class="red">Guerra</span></td>
+<td>
+<a href="clan?id=198">UDASUL</a> <a href="clan?action=war&amp;clan=198"><span class="small nomargin">Detalhes</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="item">Vitórias / Derrotas</span></td>
+<td><font color="green">10</font> / <font color="red">5</font> <span class="small">67%</span></td>
+</tr>
+<tr>
+<td><span class="item">Membros</span></td>
+<td>19</td>
+</tr>
+<tr>
+<td><span class="item">Cliques no perfil</span></td>
+<td>1,696</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="widget-box">
+<div class="widget-title">
+<span class="icon"><span class="he16-clan_desc"></span></span>
+<h5>Descrição do clan</h5>
+</div>
+<div class="widget-content padding">
+<p><b><span class="sceditor-selection sceditor-ignore" style="line-height:0;">
+<span class="sceditor-selection sceditor-ignore" style="line-height:0;"> </span>&nbsp;"</span>ALL YOUR BASE ARE BELONG TO US"<span class="sceditor-selection sceditor-ignore" style="line-height:0;"></span></b></p><p><b><br></b></p><p><b>Wanna join?<br>I don't care. we're not accepting anyone.<br><br>Quer entrar aqui nessa porra?<br>Foda-se. não estamos recrutando.<span class="sceditor-selection sceditor-ignore" style="line-height:0;"> </span><br><span class="sceditor-selection sceditor-ignore" style="line-height:0;"> </span><span class="sceditor-selection sceditor-ignore" style="line-height:0;"> </span><br></b></p>
+</div>
+</div>
+</div>
+<div class="span4">
+<div class="widget-box">
+<div class="widget-title">
+<span class="icon"><span class="he16-profile"></span></span>
+<h5>Foto e Emblemas</h5>
+<span id="total-badges" class="label label-info">1</span>
+</div>
+<div class="widget-content padding noborder">
+<div class="span12">
+<div class="span12" style="text-align: center; margin-right: 15px; margin-bottom: 5px;">
+<script pagespeed_no_defer="">
+    (function(){var g=encodeURIComponent,h=window,k=document,l="width",m="documentElement",n="height",p="length",q=this,r=function(b,d){var a=b.split("."),c=q;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a[p]&&(e=a.shift());)a[p]||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var t=function(b){var d=b[p];if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var u=function(b){var d=h;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var v,w=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:h.innerHeight||k[m].clientHeight||k.body.clientHeight,width:h.innerWidth||k[m].clientWidth||k.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},x=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e)if(a=!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=k.body;a=c.top+("pageYOffset"in h?h.pageYOffset:(k[m]||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in
+h?h.pageXOffset:(k[m]||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e[n]&&c<=b.e[l])}a&&(b.a.push(e),b.d[e]=!0)};w.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&x(this,b)};r("pagespeed.CriticalImages.checkImageForCriticality",function(b){v.checkImageForCriticality(b)});r("pagespeed.CriticalImages.checkCriticalImages",function(){y(v)});var y=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d[p];++c)a=a.concat(t(k.getElementsByTagName(d[c])));if(0!=a[p]&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)x(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a[p])for(a+="&ci="+g(b.a[0]),c=1;c<b.a[p];++c){var e=","+g(b.a[c]);131072>=a[p]+e[p]&&(a+=e)}b.g&&(e="&rd="+g(JSON.stringify(z())),131072>=a[p]+e[p]&&(a+=e),d=!0);A=a;if(d){c=b.f;b=b.h;var f;if(h.XMLHttpRequest)f=new XMLHttpRequest;else if(h.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(s){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(B){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+g(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},z=function(){var b={},d=k.getElementsByTagName("IMG");if(0==d[p])return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a[l]&&0<a[n]&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a[l]>=b[a.src].k&&a[n]>=b[a.src].j)&&(b[e]={rw:a[l],rh:a[n],ow:a.naturalWidth,oh:a.naturalHeight})}return b},A="";r("pagespeed.CriticalImages.getBeaconData",function(){return A});r("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var s=new w(b,d,a,e,f);v=s;c&&u(function(){h.setTimeout(function(){y(s)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://br.hackerexperience.com/clan','q9UknjHyEp',true,false,'4XgB3AXaZpU');</script>
+<img src="https://br.hackerexperience.com/images/clan/x18f03aa4e71ce6670cf7bc5771baa079.jpg.pagespeed.ic.DfSeEE9H92.webp" pagespeed_url_hash="3143495254" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+
+</div>
+<div class="row-fluid">
+<div class="span12 badge-div">
+<script>document.getElementById("total-badges").innerHTML="1";</script>
+<img src="https://br.hackerexperience.com/images/badges/x84.png.pagespeed.ic.4_4yU-POqz.png" class="profile-tip" value="84" pagespeed_url_hash="1648718451" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </div>
+</div>
+</div>
+<span id="modal"></span>
+<script type="text/javascript">var fr=0;var uid=12;</script>
+</div>
+<div style="clear: both;" class="nav nav-tabs">&nbsp;</div>
+</div>
+<div class="widget-box">
+<div class="widget-title">
+<span class="icon"><span class="he16-actions"></span></span>
+<h5>Ações</h5>
+</div>
+<div class="widget-content padding center">
+<ul class="quick-actions">
+<li>
+<a href="internet?ip=56.178.51.121">
+<i class="icon- he32-server"></i>
+Ir para servidor </a>
+</li>
+<li>
+<a href="https://forum.hackerexperience.com/viewforum.php?f=48">
+<i class="icon- he32-forum"></i>
+Ir para fórum </a>
+</li>
+<li>
+<a href="?action=list">
+<i class="icon- he32-members"></i>
+Ver membros </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="nav nav-tabs" style="clear: both;">&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+<div class="center" style="margin-bottom: 20px;">
+<div id="lower-ad">
+<style type="text/css">@media (min-width:320px) and (max-width:480px){.adslot_lower{width:300px;height:50px}}@media (min-width:768px) and (max-width:1024px){.adslot_lower{width:320px;height:100px}}@media (min-width:1024px){.adslot_lower{width:728px;height:90px}}@media (min-width:1280px){.adslot_lower{width:728px;height:90px}}@media (min-width:1366px){.adslot_lower{width:970px;height:90px}}@media (min-width:1824px){.adslot_lower{width:970px;height:90px}}</style>
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ 
+<ins class="adsbygoogle adslot_lower" style="display: inline-block; width: 970px; height: 90px;" data-ad-client="ca-pub-7193007468156667" data-ad-slot="4300176557" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><iframe width="970" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+</div>
+<div id="breadcrumb" class="center">
+<span class="pull-left hide-phone" style="margin-left: 10px;"><a href="legal"><font color="">Termos de Uso</font></a></span>
+<span class="pull-left hide-phone"><a href="https://forum.hackerexperience.com/"><font color="">Fórum</font></a></span>
+<span class="pull-left hide-phone"><a href="stats">Estatísticas</a></span>
+<span class="center">2014 © <b>NeoArt Labs</b><a href="https://status.hackerexperience.com/">26 queries em 178 ms</a></span>
+<span id="credits" class="pull-right hide-phone link"><a>Créditos</a></span>
+<span id="report-bug" class="pull-right hide-phone link"><a>Relatar Bug</a></span>
+<span class="pull-right hide-phone"><a href="premium"><font color="">Premium</font></a></span>
+<span class="pull-right hide-phone"><a href="changelog">v1.0.13.2</a></span>
+</div>
+<!--[if IE]><script src="js/excanvas.min.js"></script><![endif]-->
+<script src="js/jquery.min.js.pagespeed.jm.YSzgc-BSX9.js"></script>
+<script src="js/bootstrap.min.js.pagespeed.jm.2a-wIawA8s.js"></script>
+<script src="js/jquery.flot.min.js+jquery.validate.js.pagespeed.jc.bgS_BPTMZJ.js"></script><script>eval(mod_pagespeed_ZPSU$SRp7h);</script>
+ 
+ 
+<script>eval(mod_pagespeed_yAdYTkBhy1);</script>  
+<script src="js/main.js.pagespeed.jm.oC0Po-3w4s.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"2a4157be2d","applicationID":"3666873","transactionName":"MwABYkJUXUFSUxdYWwpKNkRZGlBeUl5NQVwU","queueTime":0,"applicationTime":199,"ttGuid":"","agentToken":"","atts":"H0cCFApOTk8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script>
+ 
+
+</div><div id="tiptip_holder" style="max-width:150px;"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"></div></div><script src="https://js-agent.newrelic.com/nr-476.min.js"></script><script type="text/javascript" src="https://beacon-2.newrelic.com/1/2a4157be2d?a=3666873&amp;pl=1416460104096&amp;v=476.c73f3a6&amp;to=MwABYkJUXUFSUxdYWwpKNkRZGlBeUl5NQVwU&amp;ap=199&amp;be=651&amp;fe=799&amp;dc=84&amp;f=%5B%22err%22,%22xhr%22,%22stn%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1416460104096,%22n%22:0,%22u%22:598,%22ue%22:614,%22dl%22:636,%22di%22:734,%22ds%22:734,%22de%22:952,%22dc%22:1449,%22l%22:1449,%22le%22:1451,%22f%22:0,%22dn%22:0,%22dne%22:0,%22c%22:0,%22ce%22:0,%22rq%22:1,%22rp%22:594,%22rpe%22:603%7D,%22navigation%22:%7B%7D%7D&amp;at=H0cCFApOTk8%3D&amp;jsonp=NREUM.setToken"></script></body></html>
