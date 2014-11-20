@@ -9,6 +9,15 @@
 	require_once('system/model.php');
 	
 	function __autoload($file){
+		/* 
+		
+			função para criar automaticamente um require, exemplo :
+			"$ex = new text();"
+			
+			Ao atribuir a variável 'ex' com a classe 'teste', automaricamente faz um require_once('app/models/testModel.php');
+			
+		*/
+		
 		if(file_exists(MODELS.$file.'.php')){
 			require_once(MODELS.$file.'.php');
 			}elseif(file_exists(HELPERS.$file.'.php')){
