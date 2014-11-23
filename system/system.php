@@ -49,9 +49,7 @@
 			}
 		
 		private function setParams(){
-			// site.com/busca/cidade/categoria/subcategoria   - > resultado da pesquisa
-			// site.com/nome  -> perfil do anunciante
-			// site.com/pagina -> outras paginas
+			
 
 			unset($this->_explode[0]);// elimina o 1° -> que é o controller
 			if(end($this->_explode) == NULL)
